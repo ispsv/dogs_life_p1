@@ -28,4 +28,29 @@ public class DogsHandlerTest {
         long actualResult = cut.getNoOfDogs();
         assertEquals( expectedResult, actualResult );
     }
+    @Test
+    public void getDogByNameTest() {
+        DogHandler cut = new DogHandler(itsDogRepo);
+        Dog expectedResultNoDog = null;
+        Dog expectedResultMultipleDogs = null;
+        Dog expectedResultOneDog = new Dog();
+        Dog dog1 = new Dog();
+        Dog dog2 = new Dog();
+        dog1.setName("dog1");
+        dog2.setName("dog1");
+        expectedResultOneDog.setName("dog3");
+        cut.addDog(dog1);
+        cut.addDog(dog2);
+        cut.addDog(expectedResultOneDog);
+
+        Dog actualResultNoDog = cut.getDogByName("null dog");
+        Dog actualResultMultipleDogs = cut.getDogByName("dog1");
+        Dog actualResultOneDog = cut.getDogByName("dog3");
+
+        assertEquals( expectedResultNoDog, actualResultNoDog);
+        assertEquals( expectedResultMultipleDogs, actualResultMultipleDogs);
+        assertEquals( expectedResultOneDog, actualResultOneDog);
+
+
+    }
 }
