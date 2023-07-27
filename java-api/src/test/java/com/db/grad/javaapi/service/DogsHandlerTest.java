@@ -43,9 +43,9 @@ public class DogsHandlerTest {
         cut.addDog(dog2);
         cut.addDog(expectedResultOneDog);
 
-        Dog actualResultNoDog = cut.getDogByName("null dog");
-        Dog actualResultMultipleDogs = cut.getDogByName("dog1");
-        Dog actualResultOneDog = cut.getDogByName("dog3");
+        Dog actualResultNoDog = cut.getDogByName(dog1);
+        Dog actualResultMultipleDogs = cut.getDogByName(dog1);
+        Dog actualResultOneDog = cut.getDogByName(expectedResultOneDog);
 
         assertEquals( expectedResultNoDog, actualResultNoDog);
         assertEquals( expectedResultMultipleDogs, actualResultMultipleDogs);
