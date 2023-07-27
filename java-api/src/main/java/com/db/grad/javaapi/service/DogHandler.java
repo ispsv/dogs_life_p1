@@ -27,6 +27,9 @@ public class DogHandler {
         } else {
             return result.get(0);
         }
+    }
 
+    public Dog getDogById(long id) {
+        return this.itsDogRepo.findById(id);
     }
 }

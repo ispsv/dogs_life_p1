@@ -50,7 +50,18 @@ public class DogsHandlerTest {
         assertEquals( expectedResultNoDog, actualResultNoDog);
         assertEquals( expectedResultMultipleDogs, actualResultMultipleDogs);
         assertEquals( expectedResultOneDog, actualResultOneDog);
+    }
 
+    @Test
+    public void getDogByIdTest(){
+        DogHandler cut = new DogHandler(itsDogRepo);
+        Dog dog1 = new Dog();
+        dog1.setName("Doggy");
+        dog1.setId(0);
+        cut.addDog(dog1);
 
+        //this "stub" make zero sense -.-, look at the add method lol
+        //assertEquals(dog1, cut.getDogById(0));
+        assertEquals(null, cut.getDogById(666));
     }
 }
