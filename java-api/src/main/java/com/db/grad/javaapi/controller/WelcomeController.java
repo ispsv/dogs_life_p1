@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
 
-  @GetMapping("/")
+  @GetMapping("/status")
   public String getWelcome() {
     return "Dogs API is up and running!";
   }
