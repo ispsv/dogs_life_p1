@@ -24,6 +24,7 @@ public class DogsController {
         dogsService = ds;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping("/dogs")
     public List <Dog> getAllDogs() {
         return dogsService.getAllDogs();
