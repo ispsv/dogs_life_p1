@@ -22,7 +22,7 @@ const HeroDetail = (props) => {
         <Card.Text >Name: {props.info.name}</Card.Text>
         <Row>
           <Col><Button variant="primary" onClick={incrementCounter}>Like</Button></Col>
-          <Col>{counter > 0  && <Card.Text >Likes: {counter}</Card.Text > }</Col>
+          <Col>{ counter > 0  && <Card.Text >Likes: {counter}</Card.Text > }</Col>
         </Row>
       </Card.Body>
     </Card>
